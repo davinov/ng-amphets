@@ -6,14 +6,47 @@ html(lang="en", ng-app="%module%")
     link(rel="icon", type="image/x-icon", href="/favicon.ico")
     link(rel="stylesheet", href="%styles%/app.css")
     meta(name="viewport", content="initial-scale=1.0, width:device-width")
-  body
+  body(
+    layout="column"
+  )
     base(href="/")
     md-toolbar
       .md-toolbar-tools
         span ng-amphets demo
-    md-content.md-padding(
-      ui-view
+    md-content(
+      flex
+      layout="row"
     )
+      md-sidenav.md-sidenav-left.md-whiteframe-z2.md-padding(
+        md-component-id="left"
+        md-is-locked-open="true"
+        ng-init="current = 'home'"
+      )
+        md-button(
+          md-no-ink
+          ui-sref="landing"
+          ng-click="current = 'home'"
+          ng-class="{'md-primary': current == 'home'}"
+        )
+          h4 Home
+        md-button(
+          md-no-ink
+          ui-sref="long-list"
+          ng-click="current = 'long-list'"
+          ng-class="{'md-primary': current == 'long-list'}"
+        )
+          h4 Long list
+        md-button(
+          md-no-ink
+          ui-sref="about"
+          ng-click="current = 'about'"
+          ng-class="{'md-primary': current == 'about'}"
+        )
+          h4 About
+      md-content.md-padding(
+        flex
+        ui-view
+      )
 
     script(src="%scripts%/vendor.js")
     script(src="%scripts%/app.js")
