@@ -1,0 +1,10 @@
+md-list.long-list(ng-repeat="item in list")
+  md-list-item
+    md-item-content
+      .md-tile-left
+        img.face(
+          ng-src="{{ item.picture }}"
+        )
+      .md-tile-content
+        h4 {{ item.title }}
+        p {{ item.content }}
