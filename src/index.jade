@@ -25,21 +25,21 @@ html(lang="en", ng-app="%module%")
         md-button(
           md-no-ink
           ui-sref="landing"
-          ng-click="current = 'home'"
+          f-click="current = 'home'"
           ng-class="{'md-primary': current == 'home'}"
         )
           h4 Home
         md-button(
           md-no-ink
           ui-sref="long-list"
-          ng-click="current = 'long-list'"
+          f-click="current = 'long-list'"
           ng-class="{'md-primary': current == 'long-list'}"
         )
           h4 Long list
         md-button(
           md-no-ink
           ui-sref="about"
-          ng-click="current = 'about'"
+          f-click="current = 'about'"
           ng-class="{'md-primary': current == 'about'}"
         )
           h4 About

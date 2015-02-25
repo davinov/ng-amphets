@@ -9,6 +9,7 @@
 
 angular.module '%module%', [
   'ngMaterial'
+  'ng-f-click'
   '%module%.utils'
   '%module%.landing'
   '%module%.long-list'
