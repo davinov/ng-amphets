@@ -1,4 +1,15 @@
-md-list.long-list(ng-repeat="item in list")
+md-button(
+  ng-click="updateList()"
+) Update
+
+long-list(
+  list="list"
+  title-selector="title"
+  content-selector="content"
+  picture-selector="picture"
+  )
+
+//md-list.long-list(ng-repeat="item in list")
   md-list-item
     md-item-content
       .md-tile-left
